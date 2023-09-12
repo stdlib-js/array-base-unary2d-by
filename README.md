@@ -41,30 +41,14 @@ limitations under the License.
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/array-base-unary2d-by
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var unary2dBy = require( '@stdlib/array-base-unary2d-by' );
+import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@deno/mod.js';
 ```
 
 #### unary2dBy( arrays, shape, fcn, clbk\[, thisArg] )
@@ -72,7 +56,7 @@ var unary2dBy = require( '@stdlib/array-base-unary2d-by' );
 Applies a unary callback to each element retrieved from a two-dimensional nested input array according to a callback function and assigns results to elements in a two-dimensional nested output array.
 
 ```javascript
-var abs = require( '@stdlib/math-base-special-abs' );
+import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
 
 function accessor( v ) {
     return v * 2.0;
@@ -102,7 +86,7 @@ To set the callback execution context, provide a `thisArg`.
 <!-- eslint-disable no-invalid-this -->
 
 ```javascript
-var abs = require( '@stdlib/math-base-special-abs' );
+import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
 
 function accessor( v ) {
     this.count += 1;
@@ -136,7 +120,7 @@ var cnt = context.count;
 -   If a provided callback function does not return any value (or equivalently, explicitly returns `undefined`), the value is **ignored**.
 
     ```javascript
-    var abs = require( '@stdlib/math-base-special-abs' );
+    import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
 
     function accessor() {
         // No-op...
@@ -164,12 +148,12 @@ var cnt = context.count;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
-var bernoulli = require( '@stdlib/random-base-bernoulli' );
-var filled2dBy = require( '@stdlib/array-base-filled2d-by' );
-var zeros2d = require( '@stdlib/array-base-zeros2d' );
-var abs = require( '@stdlib/math-base-special-abs' );
-var unary2dBy = require( '@stdlib/array-base-unary2d-by' );
+var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
+import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@deno/mod.js';
+import filled2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled2d-by@deno/mod.js';
+import zeros2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros2d@deno/mod.js';
+import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
+import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@deno/mod.js';
 
 function accessor( v ) {
     // Randomly determine whether a value should be considered "missing":
@@ -209,7 +193,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
