@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/array-base-unary2d-by",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Apply a unary function to each element retrieved from a two-dimensional nested input array according to a callback function and assign results to elements in a two-dimensional nested output array.",
   "license": "Apache-2.0",
   "author": {
@@ -37,18 +37,18 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/types": "^0.0.14"
+    "@stdlib/types": "^0.1.0"
   },
   "devDependencies": {
     "@stdlib/array-base-filled2d-by": "^0.0.1",
     "@stdlib/array-base-zeros2d": "github:stdlib-js/array-base-zeros2d#main",
-    "@stdlib/bench": "^0.0.12",
-    "@stdlib/math-base-assert-is-nan": "^0.0.8",
-    "@stdlib/math-base-special-abs": "^0.0.6",
-    "@stdlib/math-base-special-floor": "^0.0.8",
-    "@stdlib/math-base-special-identity": "^0.0.8",
-    "@stdlib/math-base-special-pow": "^0.0.7",
-    "@stdlib/ndarray-base-numel": "^0.0.8",
+    "@stdlib/bench": "^0.1.0",
+    "@stdlib/math-base-assert-is-nan": "^0.1.0",
+    "@stdlib/math-base-special-abs": "^0.1.0",
+    "@stdlib/math-base-special-floor": "^0.1.0",
+    "@stdlib/math-base-special-identity": "^0.1.0",
+    "@stdlib/math-base-special-pow": "^0.1.0",
+    "@stdlib/ndarray-base-numel": "^0.1.0",
     "@stdlib/random-base-bernoulli": "^0.0.6",
     "@stdlib/random-base-discrete-uniform": "^0.0.6",
     "@stdlib/random-base-uniform": "^0.0.6",
