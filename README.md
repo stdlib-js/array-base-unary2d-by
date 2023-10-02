@@ -41,19 +41,30 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-unary2d-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-base-unary2d-by/tags). For example,
-
-```javascript
-import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@v0.1.0-esm/index.mjs';
+var unary2dBy = require( '@stdlib/array-base-unary2d-by' );
 ```
 
 #### unary2dBy( arrays, shape, fcn, clbk\[, thisArg] )
@@ -61,7 +72,7 @@ import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-
 Applies a unary function to each element retrieved from a two-dimensional nested input array according to a callback function and assigns results to elements in a two-dimensional nested output array.
 
 ```javascript
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var abs = require( '@stdlib/math-base-special-abs' );
 
 function accessor( v ) {
     return v * 2.0;
@@ -93,7 +104,7 @@ To set the callback execution context, provide a `thisArg`.
 <!-- eslint-disable no-invalid-this -->
 
 ```javascript
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var abs = require( '@stdlib/math-base-special-abs' );
 
 function accessor( v ) {
     this.count += 1;
@@ -127,7 +138,7 @@ var cnt = context.count;
 -   If a provided callback function does not return any value (or equivalently, explicitly returns `undefined`), the value is **ignored**.
 
     ```javascript
-    import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+    var abs = require( '@stdlib/math-base-special-abs' );
 
     function accessor() {
         // No-op...
@@ -154,18 +165,13 @@ var cnt = context.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@esm/index.mjs';
-import filled2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled2d-by@esm/index.mjs';
-import zeros2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros2d@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
-import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var filled2dBy = require( '@stdlib/array-base-filled2d-by' );
+var zeros2d = require( '@stdlib/array-base-zeros2d' );
+var abs = require( '@stdlib/math-base-special-abs' );
+var unary2dBy = require( '@stdlib/array-base-unary2d-by' );
 
 function accessor( v ) {
     // Randomly determine whether a value should be considered "missing":
@@ -182,10 +188,6 @@ console.log( y );
 
 unary2dBy( [ x, y ], shape, abs, accessor );
 console.log( y );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -209,7 +211,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -239,8 +241,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/array-base-unary2d-by.svg
 [npm-url]: https://npmjs.org/package/@stdlib/array-base-unary2d-by
 
-[test-image]: https://github.com/stdlib-js/array-base-unary2d-by/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/array-base-unary2d-by/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/array-base-unary2d-by/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/array-base-unary2d-by/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/array-base-unary2d-by/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/array-base-unary2d-by?branch=main
