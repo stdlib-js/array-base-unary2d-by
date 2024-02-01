@@ -41,14 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-unary2d-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@deno/mod.js';
+var unary2dBy = require( '@stdlib/array-base-unary2d-by' );
 ```
 
 #### unary2dBy( arrays, shape, fcn, clbk\[, thisArg] )
@@ -56,7 +74,7 @@ import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-
 Applies a unary function to each element retrieved from a two-dimensional nested input array according to a callback function and assigns results to elements in a two-dimensional nested output array.
 
 ```javascript
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
+var abs = require( '@stdlib/math-base-special-abs' );
 
 function accessor( v ) {
     return v * 2.0;
@@ -88,7 +106,7 @@ To set the callback execution context, provide a `thisArg`.
 <!-- eslint-disable no-invalid-this -->
 
 ```javascript
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
+var abs = require( '@stdlib/math-base-special-abs' );
 
 function accessor( v ) {
     this.count += 1;
@@ -122,7 +140,7 @@ var cnt = context.count;
 -   If a provided callback function does not return any value (or equivalently, explicitly returns `undefined`), the value is **ignored**.
 
     ```javascript
-    import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
+    var abs = require( '@stdlib/math-base-special-abs' );
 
     function accessor() {
         // No-op...
@@ -150,12 +168,12 @@ var cnt = context.count;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@deno/mod.js';
-import filled2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled2d-by@deno/mod.js';
-import zeros2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros2d@deno/mod.js';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
-import unary2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var filled2dBy = require( '@stdlib/array-base-filled2d-by' );
+var zeros2d = require( '@stdlib/array-base-zeros2d' );
+var abs = require( '@stdlib/math-base-special-abs' );
+var unary2dBy = require( '@stdlib/array-base-unary2d-by' );
 
 function accessor( v ) {
     // Randomly determine whether a value should be considered "missing":
@@ -195,7 +213,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -249,8 +267,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 [deno-url]: https://github.com/stdlib-js/array-base-unary2d-by/tree/deno
+[deno-readme]: https://github.com/stdlib-js/array-base-unary2d-by/blob/deno/README.md
 [umd-url]: https://github.com/stdlib-js/array-base-unary2d-by/tree/umd
+[umd-readme]: https://github.com/stdlib-js/array-base-unary2d-by/blob/umd/README.md
 [esm-url]: https://github.com/stdlib-js/array-base-unary2d-by/tree/esm
+[esm-readme]: https://github.com/stdlib-js/array-base-unary2d-by/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/array-base-unary2d-by/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-base-unary2d-by/main/LICENSE
