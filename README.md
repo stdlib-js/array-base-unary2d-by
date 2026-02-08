@@ -50,7 +50,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-unary2dBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@umd/browser.js' )
+unary2dBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@v0.2.3-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -62,7 +62,7 @@ var unary2dBy = require( 'path/to/vendor/umd/array-base-unary2d-by/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-unary2d-by@v0.2.3-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
